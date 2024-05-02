@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Kalam:wght@300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes comeFromBottom {
+      from {
+            transform: translateY(100%);
+      }
+      to {
+            transform: translateY(0);
+      }
+}
+
+@keyframes fadeOut {
+      from {
+            opacity: 1;
+      }
+
+      to {
+            opacity: 0;
+      }
+}
+
+@keyframes opacityReduce {
+      0% {
+            opacity: 1;
+      }
+
+      50% {
+            opacity: 0.5;
+      }
+      100% {
+            opacity: 1;
+      }
+}
+
+@keyframes blinking {
+      0% {
+            height: 100%;
+            background-color: rgb(112 26 117 / 1);
+      }
+      50% {
+            height: 0%;
+      }
+      100% {
+            background-color: rgb(49, 1, 52);
+            /* background-color: rgb(76, 76, 76); */
+
+            height: 100%;
+      }
+}
+
+@keyframes blinkingLight {
+      0% {
+            height: 100%;
+            background-color: rgb(49, 1, 52);
+      }
+      50% {
+            height: 0%;
+      }
+      100% {
+            background-color: rgb(112 26 117 / 1);
+            /* background-color: rgb(76, 76, 76); */
+
+            height: 100%;
+      }
+}
+
+@keyframes shirking {
+      50% {
+            height: 4rem;
+            font-size: 3.5rem; /* 128px */
+      }
+
+      100%,
+      0% {
+            height: 9rem;
+            font-size: 8rem; /* 128px */
+            line-height: 1;
+      }
+}
+
+.animate-fade-out {
+      animation: fadeOut 3s ease-in forwards;
+}
+.animate-shirking {
+      animation: shirking 2s ease-in-out forwards;
+      animation-iteration-count: 4;
+}
+
+.animate-blink-end {
+      animation: blinkingLight 1.5s linear forwards;
+}
+.animate-opacity {
+      animation: opacityReduce 2s ease-in-out forwards;
+      animation-iteration-count: 4;
+}
+
+.animate-blink {
+      animation: blinking 1.5s linear forwards;
+      /* animation-delay: 4s; */
+}
+
+.animate-from-bottom {
+      animation: comeFromBottom 0.4s linear forwards;
+}
