@@ -49,7 +49,6 @@ export const OptionBox = ({
                   return defaultBg;
             };
 
-            console.log("the get value", get());
             return get();
       };
 

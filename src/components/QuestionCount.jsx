@@ -5,7 +5,6 @@ import { getQuestionIndex, showQuestion } from "../redux/questionSlice";
 const QuestionCount = () => {
       const questionIndex = useSelector(getQuestionIndex);
       const dispatch = useDispatch();
-      console.log("hiadfkd in side qustion count");
 
       return (
             <div className="  w-[97.9%] h-full  absolute ">

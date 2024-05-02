@@ -54,8 +54,6 @@ const GameWrap = () => {
             };
       }, [isWrongORcorrect, dispatch]);
 
-      console.log("isQuestionNumberVisible", isQuestionNumberVisible);
-
       return (
             <div className=" px-4 w-full h-[80%] relative">
                   {isQuestionNumberVisible ? <QuestionCount /> : null}

@@ -18,7 +18,6 @@ const StartTransition = ({ onTransitionEnd }) => {
 
       const animationHandler = (e) => {
             if (e.animationName === "shirking") {
-                  console.log("animatioin happens");
                   setTextToShow((prev) => {
                         return prev <= 0 ? 0 : --prev;
                   });

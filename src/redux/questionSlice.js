@@ -52,7 +52,6 @@ const questionSlice = createSlice({
             },
 
             showQuestionNumber: (state, action) => {
-                  console.log("calling shoq quesitn number");
                   state.answerState = answerStateOptions.questionNumber;
             },
 
@@ -82,7 +81,6 @@ const questionSlice = createSlice({
                         // Set loading state to false and update notifications when fetch is successful
                         state.loading = false;
                         state.questions = action.payload;
-                        console.log("action.payload", action.payload);
                         state.currentQuentin = action.payload[0];
                   })
                   .addCase(loadAllQuestions.rejected, (state, action) => {
